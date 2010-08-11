@@ -136,27 +136,50 @@
        : sudo init 6
 
     3. Devices -> Install GuestAdditions
-    4. $ sudo mkdir /media/cdrom
-    5. $ sudo mount /dev/cdrom /media/cdrom
-    6. $ sudo /media/cdrom/VBoxLinuxAdditions-x86.run
+    4.
+
+      : sudo mkdir /media/cdrom
+
+    5.
+
+      : sudo mount /dev/cdrom /media/cdrom
+
+    6.
+
+      : sudo /media/cdrom/VBoxLinuxAdditions-x86.run
+
     7. ignore warning "Could not find the X.Org or XFree86 Window
        System": we're on a server without X, so this is OK.
 * SSH connection between Virtualbox Host and Guest (2-way)
   1. Check if public key is present on host:
-     host$ test -e ~/.ssh/id_dsa.pub || ssh-keygen -t dsa
+
+     : host$ test -e ~/.ssh/id_dsa.pub || ssh-keygen -t dsa
+
   2. Allow host-to-host connection by appending public key to known hosts:
-     host$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys2
+
+     : host$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys2
+
   3. Copy public key from host to guest
-     host$ scp ~/.ssh/id_dsa.pub patrick@testserver/home/patrick/.ssh/pub_key_from_host
+
+     : host$ scp ~/.ssh/id_dsa.pub patrick@testserver/home/patrick/.ssh/pub_key_from_host
+
   4. Append host public key to known hosts in guest system and clean up:
-     guest$ cat ~/.ssh/pub_key_from_host >> ~/.ssh/authorized_keys2
-     guest$ rm ~/.ssh/pub_key_from_host
+
+     : guest$ cat ~/.ssh/pub_key_from_host >> ~/.ssh/authorized_keys2
+     : guest$ rm ~/.ssh/pub_key_from_host
+
   5. Now we have to create a public key on the guest system:
-     guest$ test -e ~/.ssh/id_dsa.pub || ssh-keygen -t dsa
+
+     : guest$ test -e ~/.ssh/id_dsa.pub || ssh-keygen -t dsa
+
   6. ...copy it to the host...
-     guest$ scp id_dsa.pub patrick@192.168.178.20:/home/patrick/.ssh/key_from_test_server
+
+     : guest$ scp id_dsa.pub patrick@192.168.178.20:/home/patrick/.ssh/key_from_test_server
+
   7. ...and append it to the host's known keys:
-     host$ cat ~/.ssh/key_from_test_server >> ~/.ssh/authorized_keys2
+
+     : host$ cat ~/.ssh/key_from_test_server >> ~/.ssh/authorized_keys2
+
 ** Convenience: Update /etc/hosts
    Instead of using the IP address for guest and host we can modify
    the the file /etc/hosts on the guest and host machine. 
