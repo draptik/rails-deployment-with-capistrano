@@ -43,6 +43,7 @@
       : ubuntu-server$ sudo aptitude install openssh-server
 ** Version control system (SVN, Git, Mercurial)
    Pick the version control system of your choice:
+   
    * Mercurial
      : ubuntu-server$ sudo aptitude install mercurial
    * Git
