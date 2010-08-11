@@ -72,6 +72,7 @@
     1. We want our default site to be located at /var/www/demo.
     2. IMPORTANT Required for every new site:
        : sudo cp /etc/apache2/sites-available/default /etc/apache2/sites-available/demo.conf
+
     3. Edit the new demo.conf file
     4. Change DocumentRoot to point to the new location
     5. Change Directory directive to point to the new location
