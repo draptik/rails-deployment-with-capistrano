@@ -71,7 +71,7 @@
 *** Configure Apache2 the Debian/Ubuntu way
     1. We want our default site to be located at /var/www/demo.
     2. IMPORTANT Required for every new site:
-       : ubuntu-server$ sudo cp /etc/apache2/sites-available/default /etc/apache2/sites-available/demo.conf
+       : sudo cp /etc/apache2/sites-available/default /etc/apache2/sites-available/demo.conf
     3. Edit the new demo.conf file
     4. Change DocumentRoot to point to the new location
     5. Change Directory directive to point to the new location
@@ -80,9 +80,9 @@
        of this: a2ensite (apache2enable site) and a2dissite
        (apache2disable site).
     7. IMPORTANT Required for every new site:
-       : ubuntu-server$ sudo a2dissite default && sudo a2ensite demo
+       : sudo a2dissite default && sudo a2ensite demo
     8. Restart Apache:
-       : ubuntu-server$ sudo apache2ctl restart
+       : sudo apache2ctl restart
     9. In the client: Map 192.168.178.21 (the server ip) to
        "ubuntu-server" (more precisely: the output of uname -n) by
        adding the following line to /etc/hosts:
