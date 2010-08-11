@@ -1,0 +1,14 @@
+;; -*- mode: org -*-
+
+Patrick Drechsler [2010-08-11 Mi]
+
+Howto deploy a simple Rails application to a server
+
+* Setup/Goal
+  - Server is located in a virtual machine (using VirtualBox)
+  - Linux environment (basics should also work for other OSes, adapt
+    accordingly)
+  - Version control: Git or Mercurial (Hg)
+
+
+
