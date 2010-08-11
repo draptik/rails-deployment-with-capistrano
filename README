@@ -2,7 +2,7 @@
 
 Patrick Drechsler [2010-08-11 Mi]
 
-Howto deploy a simple Rails application to a server
+Howto deploy a simple Rails application to a server using Capistrano
 
 * Setup/Goal
   - Server is located in a virtual machine (using VirtualBox)
