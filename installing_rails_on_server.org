@@ -100,21 +100,27 @@
     10. Now call the URL http://ubuntu-server/demo from your client
        	browser.
 * Networking with VirtualBox (our "Server")
+
   * All previous changes were made within a virtual machine (Ubuntu
     Server edition 10.04). I'll refer to this as the "guest" in this
     section.
+
   * For installation I used the default NAT connection. Doing so gave
     me safe access to the internet.
+
   * After installation I created a snapshot.
+
   * Then I switched the network configuration of this virtual client
     from NAT to Bridged. This changed the guest (Ubuntu-Server) IP
     address from 10.x.x.x to a real address in my local network
     (192.168.x.x).[fn:1]
+
   * After restarting the client, get the IP address from within the
     client (f.ex. using ifconfig). Use this IP address and try to ping
     it from your host. It should work. If it does, try to log in via
     SSH from your host. It should work (if it doesn't check the
     section on setting up an SSH connection below).
+
   * We have at least 2 choices of getting our Rails app to the server
     (our virtual client): via SSH or via a shared folder between our
     virtual host system and our virtual client system (the
@@ -123,8 +129,10 @@
     will use one of these simple approaches before we go on to more
     sophisticated (automated) deployment routines using Capistrano
     later on.
+
   * If all went well we are now ready to try our first Rails
     deployment.
+
 * SSH connection between Virtualbox Host and Guest (2-way)
   1. Check if public key is present on host:
 
