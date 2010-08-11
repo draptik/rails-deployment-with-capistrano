@@ -40,12 +40,16 @@ RAILS=`which rails`
 [ ! ${RAILS} ] && echo "Rails not found. Aborting." && exit -1
 
 ## Check if Git is present
-GIT=`which git`
-[ ! ${GIT} ] && echo "Git not found. Aborting." && exit -1
+if [ ${VCS} == "git" ]; then
+    GIT=`which git`
+    [ ! ${GIT} ] && echo "Git not found. Aborting." && exit -1
+fi
 
 ## Check if Hg is present
-HG=`which hg`
-[ ! ${HG} ] && echo "Hg not found. Aborting." && exit -1
+if [ ${VCS} == "git" ]; then
+    HG=`which hg`
+    [ ! ${HG} ] && echo "Hg not found. Aborting." && exit -1
+fi
 
 ## Check if Capistrano is present
 CAPIFY=`which capify`
@@ -265,7 +269,6 @@ default_run_options[:pty] = true
 " > "${PRJDIR}"/config/deploy.rb
 fi
 if [ ${VCS} == "git" ]; then
-    # echo "Setting up config/deploy.rb for ${VCS} ..."
     echo "
 default_environment['PATH']='\$PATH:/var/lib/gems/1.8/bin'
 default_environment['GEM_PATH']='\$PATH:/var/lib/gems/1.8/gems'
@@ -326,45 +329,46 @@ if [ ${VCS} == "git" ]; then
     ${VERSION_CONTROL_COMMAND} push origin master
 fi
 
-
-## Initial setup (requires user entering password -> invoke manually from command line)
-# $ cap deploy:setup
-
-## Check settings from command line:
-# $ cap deploy:check
-#
-# The following dependencies failed. Please check them and try again:
-# --> You do not have permissions to write to `/var/www/demo'. (testserver)
-# --> You do not have permissions to write to `/var/www/demo/releases'. (testserver)
-
-## OK, changing owner permissions of /var/www/demo...
-## guest$ sudo chown -R www-data.www-data /var/www/demo
-# $ cap deploy:check
-#
-#   * executing `deploy:check'
-#   * executing "test -d /var/www/demo/releases"
-#     servers: ["testserver"]
-#     [testserver] executing command
-#     command finished
-#   * executing "test -w /var/www/demo"
-#     servers: ["testserver"]
-#     [testserver] executing command
-#     command finished
-#   * executing "test -w /var/www/demo/releases"
-#     servers: ["testserver"]
-#     [testserver] executing command
-#     command finished
-#   * executing "which hg"
-#     servers: ["testserver"]
-#     [testserver] executing command
-#     command finished
-# You appear to have all necessary dependencies installed
-#
-## Works :-)
-## 
-## We can deploy using the command
-##
-## cap deploy:migrations
-##
+echo "================================================================================="
+echo "Initial setup (requires user entering password -> invoke manually from command line)"
+echo "\$ cap deploy:setup"
+echo ""
+echo " Check settings from command line:"
+echo "\$ cap deploy:check"
+echo ""
+echo "# The following dependencies failed. Please check them and try again:"
+echo "--> You do not have permissions to write to '/var/www/demo'. (testserver)"
+echo "--> You do not have permissions to write to '/var/www/demo/releases'. (testserver)"
+echo ""
+echo "OK, changing owner permissions of /var/www/demo..."
+echo "guest\$ sudo chown -R www-data.www-data /var/www/demo"
+echo ""
+echo "\$ cap deploy:check"
+echo ""
+echo "  * executing `deploy:check'"
+echo "  * executing \"test -d /var/www/demo/releases\""
+echo "    servers: [\"testserver\"]"
+echo "    [testserver] executing command"
+echo "    command finished"
+echo "  * executing \"test -w /var/www/demo\""
+echo "    servers: [\"testserver\"]"
+echo "    [testserver] executing command"
+echo "    command finished"
+echo "  * executing \"test -w /var/www/demo/releases\""
+echo "    servers: [\"testserver\"]"
+echo "    [testserver] executing command"
+echo "    command finished"
+echo "  * executing \"which hg\""
+echo "    servers: [\"testserver\"]"
+echo "    [testserver] executing command"
+echo "    command finished"
+echo "You appear to have all necessary dependencies installed"
+echo ""
+echo "Works :-)"
+echo ""
+echo "We can deploy using the command"
+echo ""
+echo "# cap deploy:migrations"
+echo ""
 
 echo "Done."

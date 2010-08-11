@@ -5,13 +5,13 @@
   2. For now we will mostly use the default settings except for
      Memory: If our machine allows it, give it 2GB. Also, deactivate
      audio support (not needed on a server)
-* Installing Ubuntu Server 9.10 on VirtualBox (basic system)
+* Installing Ubuntu Server 10.04 on VirtualBox (basic system)
   1. Get the iso image of the Ubuntu server version from the Ubuntu
      homepage.
   2. Mount the iso image for installation
   3. Update all packages: 
      : ubuntu-server$ sudo aptitude update && sudo aptitude dist-upgrade
-* Setting up Ubuntu Server 9.10 on VirtualBox
+* Setting up Ubuntu Server 10.04 on VirtualBox
 ** Apache2
    1. Install apache2:
       : ubuntu-server$ sudo aptitude install apache2
@@ -50,29 +50,6 @@
 ** Restarting Apache2
    : ubuntu-server$ sudo /etc/init.d/apache2 restart
 ** Configure Apache2
-*** Simple test version
-    * This setup assumes we copied our Rails application to /var/www/demo.
-    * Add the following to /etc/apache2/apache2.conf:
-      : LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-2.2.11/et/apache2/mod_passenger.so
-      : PassengerRoot /var/lib/gems/1.8/gems/passenger-2.2.11
-      : PassengerRuby /usr/bin/ruby1.8
-      : 
-      : NameVirtualHost 192.168.178.21
-      : 
-      : <VirtualHost 192.168.178.21>
-      : DocumentRoot /var/www/demo/public/
-      : 
-      :   <Directory /var/www/demo/public>
-      :     Order allow,deny
-      :     Allow from all
-      :   </Directory>
-      : 
-      : </VirtualHost>
-
-    * This does not work yet. Questions:
-      - Where to put Rails application?
-      - How to setup Apache?
-      - Any further config changes needed on host?
 *** Configure Apache2 the Debian/Ubuntu way
     1. We want our default site to be located at /var/www/demo.
     2. IMPORTANT Required for every new site:
@@ -98,7 +75,7 @@
        	browser.
 * Networking with VirtualBox
   * All previous changes were made within a virtual machine (Ubuntu
-    Server edition 9.10). I'll refer to this as the "guest" in this
+    Server edition 10.04). I'll refer to this as the "guest" in this
     section.
   * For installation I used the default NAT connection. Doing so gave
     me safe access to the internet.
@@ -110,7 +87,8 @@
   * After restarting the client, get the IP address from within the
     client (f.ex. using ifconfig). Use this IP address and try to ping
     it from your host. It should work. If it does, try to log in via
-    SSH from your host. It should work.
+    SSH from your host. It should work (if it doesn't check the
+    section on setting up an SSH connection below).
   * We have at least 2 choices of getting our Rails app to the server
     (our virtual client): via SSH or via a shared folder between our
     virtual host system and our virtual client system (the
@@ -121,7 +99,7 @@
     later on.
   * If all went well we are now ready to try our first Rails
     deployment.
-** Installing VirtualBox Guest Additions on Virtual client == Ubuntu-Server
+** OPTIONAL Installing VirtualBox Guest Additions on Virtual client == Ubuntu-Server
    * Plugin guest additions from the VirtualBox menu while the
      Ubuntu-Server is running as Virtual client.
    * Manually mount the cdrom drive: sudo mount /dev/cdrom
@@ -130,7 +108,7 @@
      don't have an X-Server, so this is expected.
    * We can use byobu after sshing into the guest system (our
      server). TTY-Multiplexing is great.
-*** Update for Ubuntu Server 10.04
+*** OPTIONAL Update for Ubuntu Server 10.04
     The following steps are required for installing VirtualBox
     GuestAdditions on Ubuntu Server 10.04:
     1. $ sudo aptitude install dkms build-essential
@@ -159,12 +137,10 @@
      host$ cat ~/.ssh/key_from_test_server >> ~/.ssh/authorized_keys2
 ** Convenience: Update /etc/hosts
    Instead of using the IP address for guest and host we can modify
-   the the file /etc/hosts on the guest and host machine. Note to
-   self: The name must match the actual machine name defined in
-   /etc/hostname!
-* Optional: Install RSpec (another test framework for Rails applications)
-  : sudo gem install rspec
-  : sudo gem install rspec-rails
+   the the file /etc/hosts on the guest and host machine. 
+* OPTIONAL Install RSpec (another test framework for Rails applications)
+  : development-machine$ sudo gem install rspec
+  : development-machine$ sudo gem install rspec-rails
 ** Integration with windows manager
    : sudo gem install autotest-rails 
 * Creating a minimalistic Rails application on our development system (=host system)
