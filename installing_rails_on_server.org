@@ -71,8 +71,10 @@
 *** Configure Apache2 the Debian/Ubuntu way
     1. We want our default site to be located at /var/www/demo.
     2. IMPORTANT Required for every new site:
-       $ cd /etc/apache2/sites-available
-       $ sudo cp default demo.conf
+
+       : cd /etc/apache2/sites-available
+       : sudo cp default demo.conf
+
     3. Edit the new demo.conf file
     4. Change DocumentRoot to point to the new location
     5. Change Directory directive to point to the new location
@@ -81,13 +83,19 @@
        of this: a2ensite (apache2enable site) and a2dissite
        (apache2disable site).
     7. IMPORTANT Required for every new site:
-       $ sudo a2dissite default && sudo a2ensite demo
+
+       : sudo a2dissite default && sudo a2ensite demo
+
     8. Restart Apache:
-       $ sudo apache2ctl restart
+
+       : sudo apache2ctl restart
+
     9. In the client: Map 192.168.178.21 (the server ip) to
        "ubuntu-server" (more precisely: the output of uname -n) by
        adding the following line to /etc/hosts:
+
        : 192.168.178.21  ubuntu-server
+
     10. Now call the URL http://ubuntu-server/demo from your client
        	browser.
 * Networking with VirtualBox (our "Server")
@@ -119,8 +127,14 @@
 *** OPTIONAL Update for Ubuntu Server 10.04
     The following steps are required for installing VirtualBox
     GuestAdditions on Ubuntu Server 10.04:
-    1. $ sudo aptitude install dkms build-essential
-    2. Reboot: $ sudo init 6
+    1.
+
+      : sudo aptitude install dkms build-essential
+
+    2. Reboot:
+
+       : sudo init 6
+
     3. Devices -> Install GuestAdditions
     4. $ sudo mkdir /media/cdrom
     5. $ sudo mount /dev/cdrom /media/cdrom
