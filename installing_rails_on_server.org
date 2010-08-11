@@ -1,0 +1,185 @@
+* Title: Deploying a Rails application to a Linux server located in a virtual machine
+* Installing VirtualBox
+  1. Install the Sun version of VirtualBox (not the OpenSource
+     version, it has some minor drawbacks)
+  2. For now we will mostly use the default settings except for
+     Memory: If our machine allows it, give it 2GB. Also, deactivate
+     audio support (not needed on a server)
+* Installing Ubuntu Server 9.10 on VirtualBox (basic system)
+  1. Get the iso image of the Ubuntu server version from the Ubuntu
+     homepage.
+  2. Mount the iso image for installation
+  3. Update all packages: 
+     : ubuntu-server$ sudo aptitude update && sudo aptitude dist-upgrade
+* Setting up Ubuntu Server 9.10 on VirtualBox
+** Apache2
+   1. Install apache2:
+      : ubuntu-server$ sudo aptitude install apache2
+** Add user to group www-data
+   1. Check that group www-data exists:
+      : ubuntu-server$ grep -e ^www /etc/group
+   2. Add user to group www-data:
+      : ubuntu-server$ sudo adduser patrick www-data
+      
+** SSH
+   1. Install openSSH:
+      : ubuntu-server$ sudo aptitude install openssh-server
+** Version control system (SVN, Git, Mercurial)
+   Pick the version control system of your choice:
+   * Mercurial
+     : ubuntu-server$ sudo aptitude install mercurial
+   * Git
+     : ubuntu-server$ sudo aptitude install \
+     : git-doc git-arch git-cvs git-svn git-email git-daemon-run gitweb 
+   * Subversion
+     : ubuntu-server$ sudo aptitude install subversion
+** Ruby and Rails
+   * Ruby
+     : ubuntu-server$ sudo aptitude install rubygems ruby1.8-dev build-essential \
+     : libopenssl-ruby ruby libsqlite3-dev apache2-prefork-dev \
+     : libapr1-dev libaprutil1-dev
+   * Rails
+     : ubuntu-server$ sudo gem install rails rake
+   * SQLite3 support
+     : ubuntu-server$ sudo gem install sqlite3-ruby
+** Passenger
+   : ubuntu-server$ sudo gem install passenger
+   : ubuntu-server$ sudo /var/lib/gems/1.8/bin/passenger-install-apache2-module
+** Mongrel (not sure if this is needed; I don't think so)
+   : sudo gem install mongrel
+** Restarting Apache2
+   : ubuntu-server$ sudo /etc/init.d/apache2 restart
+** Configure Apache2
+*** Simple test version
+    * This setup assumes we copied our Rails application to /var/www/demo.
+    * Add the following to /etc/apache2/apache2.conf:
+      : LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-2.2.11/et/apache2/mod_passenger.so
+      : PassengerRoot /var/lib/gems/1.8/gems/passenger-2.2.11
+      : PassengerRuby /usr/bin/ruby1.8
+      : 
+      : NameVirtualHost 192.168.178.21
+      : 
+      : <VirtualHost 192.168.178.21>
+      : DocumentRoot /var/www/demo/public/
+      : 
+      :   <Directory /var/www/demo/public>
+      :     Order allow,deny
+      :     Allow from all
+      :   </Directory>
+      : 
+      : </VirtualHost>
+
+    * This does not work yet. Questions:
+      - Where to put Rails application?
+      - How to setup Apache?
+      - Any further config changes needed on host?
+*** Configure Apache2 the Debian/Ubuntu way
+    1. We want our default site to be located at /var/www/demo.
+    2. IMPORTANT Required for every new site:
+       : ubuntu-server$ sudo cp \
+       : /etc/apache2/sites-available/default \
+       : /etc/apache2/sites-available/demo.conf
+    3. Edit the new demo.conf file
+    4. Change DocumentRoot to point to the new location
+    5. Change Directory directive to point to the new location
+    6. Now, we must deactivate the old site, and activate our new
+       one. Ubuntu/Debian provides two small utilities that take care
+       of this: a2ensite (apache2enable site) and a2dissite
+       (apache2disable site).
+    7. IMPORTANT Required for every new site:
+       : ubuntu-server$ sudo a2dissite default && sudo a2ensite demo
+    8. Restart Apache:
+       : ubuntu-server$ sudo apache2ctl restart
+    9. In the client: Map 192.168.178.21 (the server ip) to
+       "ubuntu-server" (more precisely: the output of uname -n) by
+       adding the following line to /etc/hosts:
+       : 192.168.178.21  ubuntu-server
+    10. Now call the URL http://ubuntu-server/demo from your client
+       	browser.
+* Networking with VirtualBox
+  * All previous changes were made within a virtual machine (Ubuntu
+    Server edition 9.10). I'll refer to this as the "guest" in this
+    section.
+  * For installation I used the default NAT connection. Doing so gave
+    me safe access to the internet.
+  * After installation I created a snapshot.
+  * Then I switched the network configuration of this virtual client
+    from NAT to Bridged. This changed the guest (Ubuntu-Server) IP
+    address from 10.x.x.x to a real address in my local network
+    (192.168.x.x).[fn:1]
+  * After restarting the client, get the IP address from within the
+    client (f.ex. using ifconfig). Use this IP address and try to ping
+    it from your host. It should work. If it does, try to log in via
+    SSH from your host. It should work.
+  * We have at least 2 choices of getting our Rails app to the server
+    (our virtual client): via SSH or via a shared folder between our
+    virtual host system and our virtual client system (the
+    server). Using a shared folder is a bit simpler, but requires the
+    installation of the VirtualBox Guest Additions (see below). We
+    will use one of these simple approaches before we go on to more
+    sophisticated (automated) deployment routines using Capistrano
+    later on.
+  * If all went well we are now ready to try our first Rails
+    deployment.
+** Installing VirtualBox Guest Additions on Virtual client == Ubuntu-Server
+   * Plugin guest additions from the VirtualBox menu while the
+     Ubuntu-Server is running as Virtual client.
+   * Manually mount the cdrom drive: sudo mount /dev/cdrom
+   * sudo /media/cdrom/VBoxLinuxAdditions-x86.run
+   * Installation OK, but we can still not resize the window. :-( We
+     don't have an X-Server, so this is expected.
+   * We can use byobu after sshing into the guest system (our
+     server). TTY-Multiplexing is great.
+*** Update for Ubuntu Server 10.04
+    The following steps are required for installing VirtualBox
+    GuestAdditions on Ubuntu Server 10.04:
+    1. $ sudo aptitude install dkms build-essential
+    2. Reboot: $ sudo init 6
+    3. Devices -> Install GuestAdditions
+    4. $ sudo mkdir /media/cdrom
+    5. $ sudo mount /dev/cdrom /media/cdrom
+    6. $ sudo /media/cdrom/VBoxLinuxAdditions-x86.run
+    7. ignore warning "Could not find the X.Org or XFree86 Window
+       System": we're on a server without X, so this is OK.
+* SSH connection between Virtualbox Host and Guest (2-way)
+  1. Check if public key is present on host:
+     host$ test -e ~/.ssh/id_dsa.pub || ssh-keygen -t dsa
+  2. Allow host-to-host connection by appending public key to known hosts:
+     host$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys2
+  3. Copy public key from host to guest
+     host$ scp ~/.ssh/id_dsa.pub patrick@testserver/home/patrick/.ssh/pub_key_from_host
+  4. Append host public key to known hosts in guest system and clean up:
+     guest$ cat ~/.ssh/pub_key_from_host >> ~/.ssh/authorized_keys2
+     guest$ rm ~/.ssh/pub_key_from_host
+  5. Now we have to create a public key on the guest system:
+     guest$ test -e ~/.ssh/id_dsa.pub || ssh-keygen -t dsa
+  6. ...copy it to the host...
+     guest$ scp id_dsa.pub patrick@192.168.178.20:/home/patrick/.ssh/key_from_test_server
+  7. ...and append it to the host's known keys:
+     host$ cat ~/.ssh/key_from_test_server >> ~/.ssh/authorized_keys2
+** Convenience: Update /etc/hosts
+   Instead of using the IP address for guest and host we can modify
+   the the file /etc/hosts on the guest and host machine. Note to
+   self: The name must match the actual machine name defined in
+   /etc/hostname!
+* Optional: Install RSpec (another test framework for Rails applications)
+  : sudo gem install rspec
+  : sudo gem install rspec-rails
+** Integration with windows manager
+   : sudo gem install autotest-rails 
+* Creating a minimalistic Rails application on our development system (=host system)
+  Since this is a tutorial about Rails deployment on a virtual
+  machine, I'll assume you know how to create a Rails
+  application. Therefore I'll just provide short comments and the
+  commands to create a very simple Rails app so we can go along and
+  deploy it to our server.
+
+** Create project demo
+   View script [[file:create_minimal_rails_project.sh::bin%20bash][create-minimal-rails.sh]], adapt to your needs, and run the script.
+
+
+* Footnotes
+
+[fn:1] Sidenote: Ensure that the guest system has a unique hostname
+within your network. You can change the hostname of your guest system
+by editing the file /etc/hostname.

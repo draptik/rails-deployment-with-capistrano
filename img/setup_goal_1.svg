@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="460"
+   height="400"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="setup_goal_1.svg"
+   inkscape:export-filename="/home/patrick/Desktop/Zeichnung1.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL"
+       style="overflow:visible">
+      <path
+         id="path4578"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="scale(0.8,0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInL"
+       style="overflow:visible">
+      <path
+         id="path4569"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="scale(-0.8,-0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path4435"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective4220"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4357"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5460"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5513"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5571"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5875"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5875-2"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6141"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6226"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2910"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7147339"
+     inkscape:cx="152.97855"
+     inkscape:cy="193.61474"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:snap-global="true"
+     objecttolerance="10000"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     guidetolerance="10000"
+     gridtolerance="10000">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2816"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="1px"
+       spacingy="1px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-7.02145,-561.1911)"
+     style="display:inline">
+    <rect
+       style="opacity:0.9;fill:none;stroke:#bf3bf2;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3390"
+       width="452.15036"
+       height="397.28369"
+       x="8.02145"
+       y="562.90741" />
+    <rect
+       style="opacity:0.2;fill:none;stroke:none"
+       id="rect4326"
+       width="110"
+       height="35"
+       x="20"
+       y="695.99292" />
+    <rect
+       style="opacity:0.9;fill:none;stroke:#bf3bf2;stroke-width:0.86244667;stroke-opacity:1"
+       id="rect4164"
+       width="438.1434"
+       height="41.151173"
+       x="16.065245"
+       y="569.84174" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="25"
+       y="585.99292"
+       id="text4166"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4168"
+         x="25"
+         y="585.99292"
+         style="writing-mode:lr-tb">Development</tspan><tspan
+         sodipodi:role="line"
+         x="25"
+         y="597.00592"
+         id="tspan4170"
+         style="font-size:8px">OS: Ubuntu 9.10</tspan><tspan
+         sodipodi:role="line"
+         x="25"
+         y="607.00592"
+         id="tspan4174"
+         style="font-size:8px">IP: 192.168.178.20</tspan></text>
+    <g
+       id="g4344"
+       transform="translate(265.12035,-405.85682)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4322"
+         y="992.36218"
+         x="75"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px;stroke:none"
+           y="992.36218"
+           x="75"
+           id="tspan4324"
+           sodipodi:role="line">Virtualisation: Host</tspan></text>
+      <rect
+         y="982.36218"
+         x="70"
+         height="15"
+         width="85"
+         id="rect4328"
+         style="opacity:0.2;fill:#30e8f1;fill-opacity:1;stroke:#f23b9a;stroke-width:1;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:none;stroke:#f00e00;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5450"
+       width="85"
+       height="75"
+       x="330"
+       y="675.99292" />
+    <rect
+       style="fill:none;stroke:#3b48f2;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4252"
+       width="223.19592"
+       height="263.36246"
+       x="220"
+       y="665.99292" />
+    <rect
+       style="opacity:0.9;fill:none;stroke:#bf3bf2;stroke-width:0.86244667;stroke-opacity:1"
+       id="rect4164-3"
+       width="214.19145"
+       height="40.000004"
+       x="225"
+       y="670.99292" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="230"
+       y="685.99292"
+       id="text4166-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4168-3"
+         x="230"
+         y="685.99292"
+         style="writing-mode:lr-tb">Server</tspan><tspan
+         sodipodi:role="line"
+         x="230"
+         y="697.00592"
+         id="tspan4170-3"
+         style="font-size:8px">OS: Ubuntu Server 9.10</tspan><tspan
+         sodipodi:role="line"
+         x="230"
+         y="707.00592"
+         id="tspan4174-2"
+         style="font-size:8px">IP: 192.168.178.21</tspan></text>
+    <g
+       id="g4383"
+       transform="translate(299.43303,-247.52148)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4322-2"
+         y="942.36218"
+         x="45"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px;stroke:none"
+           y="942.36218"
+           x="45"
+           id="tspan4324-9"
+           sodipodi:role="line">Virtualisation: Guest</tspan></text>
+      <rect
+         y="932.36218"
+         x="40"
+         height="15"
+         width="95.000008"
+         id="rect4328-5"
+         style="opacity:0.2;fill:#30e8f1;fill-opacity:1;stroke:#f23b9a;stroke-width:1;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:none;stroke:#f00000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5448"
+       width="165"
+       height="85"
+       x="225"
+       y="720.99292" />
+    <rect
+       style="fill:#f7e79c;stroke:#000000;stroke-width:0.99999994000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;fill-opacity:1"
+       id="rect4252-5"
+       width="154.07216"
+       height="77.010323"
+       x="232.80383"
+       y="724.49915" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="236.15436"
+       y="734.01599"
+       id="text4166-6-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4168-3-2"
+         x="236.15436"
+         y="734.01599"
+         style="font-size:8px;font-weight:bold;writing-mode:lr-tb;-inkscape-font-specification:Andale Mono Bold">Software</tspan><tspan
+         sodipodi:role="line"
+         x="236.15436"
+         y="744.01599"
+         id="tspan4174-2-3"
+         style="font-size:8px">- SSH</tspan><tspan
+         sodipodi:role="line"
+         x="236.15436"
+         y="754.01599"
+         style="font-size:8px"
+         id="tspan5711">- Version Control Client (SVN, Hg, Git)</tspan><tspan
+         sodipodi:role="line"
+         x="236.15436"
+         y="764.01599"
+         style="font-size:8px"
+         id="tspan5546">- <tspan
+   style="font-weight:bold;-inkscape-font-specification:Andale Mono Bold"
+   id="tspan6745">Apache</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="236.15436"
+         y="774.01599"
+         style="font-size:8px"
+         id="tspan5548">- Ruby</tspan><tspan
+         sodipodi:role="line"
+         x="236.15436"
+         y="784.01599"
+         style="font-size:8px"
+         id="tspan5538">- Rails</tspan><tspan
+         sodipodi:role="line"
+         x="236.15436"
+         y="794.01599"
+         style="font-size:8px"
+         id="tspan5542">- <tspan
+   style="font-weight:bold;-inkscape-font-specification:Andale Mono Bold"
+   id="tspan6747">Passenger</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="236.15436"
+         y="804.01599"
+         style="font-size:8px"
+         id="tspan5544" /></text>
+    <g
+       id="g5854">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4310"
+         y="618.20941"
+         x="207.83505"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           y="618.20941"
+           x="207.83505"
+           id="tspan4312"
+           sodipodi:role="line"> </tspan></text>
+      <rect
+         y="618.00323"
+         x="18.5567"
+         height="64.999977"
+         width="184.22681"
+         id="rect4252-5-6"
+         style="fill:#f7e79c;stroke:#000000;stroke-width:0.99999994000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;fill-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4166-6-5-1"
+         y="628.00323"
+         x="23.5567"
+         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           style="font-size:8px;font-weight:bold;writing-mode:lr-tb;-inkscape-font-specification:Andale Mono Bold"
+           y="628.00323"
+           x="23.5567"
+           id="tspan4168-3-2-8"
+           sodipodi:role="line">Software</tspan><tspan
+           style="font-size:8px"
+           id="tspan4174-2-3-7"
+           y="638.00323"
+           x="23.5567"
+           sodipodi:role="line">- SSH</tspan><tspan
+           id="tspan5548-0"
+           style="font-size:8px"
+           y="648.00323"
+           x="23.5567"
+           sodipodi:role="line">- Version Control &quot;Server&quot; (i.e. SVN, Hg, Git)</tspan><tspan
+           id="tspan5623"
+           style="font-size:8px"
+           y="658.00323"
+           x="23.5567"
+           sodipodi:role="line">- Ruby</tspan><tspan
+           id="tspan5538-7"
+           style="font-size:8px"
+           y="668.00323"
+           x="23.5567"
+           sodipodi:role="line">- Rails</tspan><tspan
+           id="tspan5542-4"
+           style="font-size:8px"
+           y="678.00323"
+           x="23.5567"
+           sodipodi:role="line">- <tspan
+   style="font-weight:bold;-inkscape-font-specification:Andale Mono Bold"
+   id="tspan6749">Capistrano</tspan></tspan><tspan
+           id="tspan5544-7"
+           style="font-size:8px"
+           y="688.00323"
+           x="23.5567"
+           sodipodi:role="line" /></text>
+    </g>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:1.70000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 378.26506,591.50536 8.02326,93.33534"
+       id="path5700"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g4344"
+       inkscape:connection-end="#g4383" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="230.77031"
+       y="853.86182"
+       id="text4310-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4312-6"
+         x="230.77031"
+         y="853.86182"> </tspan></text>
+    <g
+       id="g6326"
+       transform="translate(0.5831811,28.575859)">
+      <rect
+         y="738.76898"
+         x="22.246996"
+         height="55.085903"
+         width="120.6601"
+         id="rect4252-5-6-4"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4166-6-5-1-7"
+         y="748.76898"
+         x="26.663815"
+         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           id="tspan6119"
+           style="font-size:8px;font-weight:bold;writing-mode:lr-tb;-inkscape-font-specification:Andale Mono Bold"
+           y="748.76898"
+           x="26.663815"
+           sodipodi:role="line">Rails Code (~/tmp/demo)</tspan><tspan
+           style="font-size:8px"
+           id="tspan4174-2-3-7-9"
+           y="758.76898"
+           x="26.663815"
+           sodipodi:role="line">- app</tspan><tspan
+           id="tspan5548-0-0"
+           style="font-size:8px"
+           y="768.76898"
+           x="26.663815"
+           sodipodi:role="line">- config</tspan><tspan
+           id="tspan6099"
+           style="font-size:8px"
+           y="778.76898"
+           x="26.663815"
+           sodipodi:role="line">- public</tspan><tspan
+           id="tspan5623-5"
+           style="font-size:8px"
+           y="788.76898"
+           x="26.663815"
+           sodipodi:role="line">- etc..</tspan><tspan
+           id="tspan5544-7-4"
+           style="font-size:8px"
+           y="798.76898"
+           x="26.663815"
+           sodipodi:role="line" /></text>
+    </g>
+    <g
+       id="g6187"
+       transform="translate(-80.478962,-17.495426)">
+      <rect
+         y="828.87048"
+         x="313.48886"
+         height="55.085903"
+         width="136.40598"
+         id="rect4252-5-6-4-3"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4166-6-5-1-7-1"
+         y="838.87048"
+         x="318.48886"
+         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           id="tspan6119-2"
+           style="font-size:8px;font-weight:bold;writing-mode:lr-tb;-inkscape-font-specification:Andale Mono Bold"
+           y="838.87048"
+           x="318.48886"
+           sodipodi:role="line">Rails Code (/var/www/demo)</tspan><tspan
+           style="font-size:8px"
+           id="tspan4174-2-3-7-9-7"
+           y="848.87048"
+           x="318.48886"
+           sodipodi:role="line">- app</tspan><tspan
+           id="tspan5548-0-0-8"
+           style="font-size:8px"
+           y="858.87048"
+           x="318.48886"
+           sodipodi:role="line">- config</tspan><tspan
+           id="tspan6099-8"
+           style="font-size:8px"
+           y="868.87048"
+           x="318.48886"
+           sodipodi:role="line">- public</tspan><tspan
+           id="tspan5623-5-8"
+           style="font-size:8px"
+           y="878.87048"
+           x="318.48886"
+           sodipodi:role="line">- etc..</tspan><tspan
+           id="tspan5544-7-4-9"
+           style="font-size:8px"
+           y="888.87048"
+           x="318.48886"
+           sodipodi:role="line" /></text>
+    </g>
+    <g
+       id="g5206"
+       transform="translate(20.994511,45.488108)">
+      <rect
+         y="846.9491"
+         x="65.637009"
+         height="41.089561"
+         width="79.254265"
+         id="rect4252-5-6-4-7"
+         style="opacity:0.13243247;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:1;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4166-6-5-1-7-8"
+         y="863.94727"
+         x="80.551071"
+         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         xml:space="preserve"><tspan
+           id="tspan6119-4"
+           style="font-size:8px;font-weight:bold;writing-mode:lr-tb;-inkscape-font-specification:Andale Mono Bold"
+           y="863.94727"
+           x="80.551071"
+           sodipodi:role="line">Repository</tspan><tspan
+           id="tspan5544-7-4-2"
+           style="font-size:8px"
+           y="873.94727"
+           x="80.551071"
+           sodipodi:role="line">SVN, Hg, Git</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:none;marker-end:url(#TriangleOutL)"
+       d="m 165.88578,343.84433 70.26503,-29.74554"
+       id="path5214"
+       transform="translate(0,552.36217)"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g5206"
+       inkscape:connection-end="#g6187" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleInL)"
+       d="M 118.76084,340.07503 93.212016,270.06857"
+       id="path5218"
+       transform="translate(0,552.36217)"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g5206"
+       inkscape:connection-end="#g6326" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Ebene"
+     style="display:inline"
+     transform="translate(-7.02145,171.17107)" />
+</svg>
