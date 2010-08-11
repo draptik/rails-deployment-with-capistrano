@@ -1,4 +1,21 @@
-* Title: Deploying a Rails application to a Linux server located in a virtual machine
+#+TITLE: Deploying a Rails application to a server located in a virtual machine using Capistrano
+* Motivation/Goals
+  After going through my first couple of [[http://rubyonrails.org/][Ruby on Rails]] tutorials I
+  wanted to find out which deployment options are available before
+  digging any deeper into actual coding. So here is my take at using
+  [[http://www.capify.org][Capistrano]] for deployment.
+
+  The setup I will describe here will use [[http://www.modrails.com/][Phusion Passenger]] running in
+  an [[http://httpd.apache.org/][Apache Web Server]]. For testing purposes the Apache Server will be
+  located within a virtual machine using [[http://www.virtualbox.org/][VirtualBox]]. The server within
+  the virtual machine will running on an [[http://www.ubuntu.com/server][Ubuntu Server]] (currently
+  version 10.04). My current development environment is a standard
+  [[http://www.ubuntu.com/][Ubuntu Desktop]] (Linux).
+
+  The images [[file:img/setup_goal_1.svg]] and [[file:img/setup_goal_2.svg]]
+  give a brief overview of the setup.
+
+  If your setup differs, adapt the [[file:create_minimal_rails_project.sh][setup script]] accordingly.
 * Installing VirtualBox
   1. Install the Sun version of VirtualBox (not the OpenSource
      version, it has some minor drawbacks)
@@ -11,7 +28,7 @@
   2. Mount the iso image for installation
   3. Update all packages: 
      : ubuntu-server$ sudo aptitude update && sudo aptitude dist-upgrade
-* Setting up Ubuntu Server 10.04 on VirtualBox
+* Setting up Ubuntu Server 10.04 on VirtualBox (our "Server")
 ** Apache2
    1. Install apache2:
       : ubuntu-server$ sudo aptitude install apache2
@@ -73,7 +90,7 @@
        : 192.168.178.21  ubuntu-server
     10. Now call the URL http://ubuntu-server/demo from your client
        	browser.
-* Networking with VirtualBox
+* Networking with VirtualBox (our "Server")
   * All previous changes were made within a virtual machine (Ubuntu
     Server edition 10.04). I'll refer to this as the "guest" in this
     section.
@@ -138,20 +155,17 @@
 ** Convenience: Update /etc/hosts
    Instead of using the IP address for guest and host we can modify
    the the file /etc/hosts on the guest and host machine. 
-* OPTIONAL Install RSpec (another test framework for Rails applications)
-  : development-machine$ sudo gem install rspec
-  : development-machine$ sudo gem install rspec-rails
-** Integration with windows manager
-   : sudo gem install autotest-rails 
 * Creating a minimalistic Rails application on our development system (=host system)
-  Since this is a tutorial about Rails deployment on a virtual
-  machine, I'll assume you know how to create a Rails
+  Since this is a tutorial about Rails deployment using Capistrano on
+  a virtual machine, I'll assume you know how to create a Rails
   application. Therefore I'll just provide short comments and the
   commands to create a very simple Rails app so we can go along and
   deploy it to our server.
 
 ** Create project demo
-   View script [[file:create_minimal_rails_project.sh::bin%20bash][create-minimal-rails.sh]], adapt to your needs, and run the script.
+   View script [[file:create_minimal_rails_project.sh::bin%20bash][create-minimal-rails.sh]], adapt to your needs, and run
+   the script. The output at the end of the script shows the actual
+   usage of Capistrano.
 
 
 * Footnotes
