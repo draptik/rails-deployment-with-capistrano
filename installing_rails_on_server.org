@@ -117,15 +117,6 @@
     later on.
   * If all went well we are now ready to try our first Rails
     deployment.
-** OPTIONAL Installing VirtualBox Guest Additions on Virtual client == Ubuntu-Server
-   * Plugin guest additions from the VirtualBox menu while the
-     Ubuntu-Server is running as Virtual client.
-   * Manually mount the cdrom drive: sudo mount /dev/cdrom
-   * sudo /media/cdrom/VBoxLinuxAdditions-x86.run
-   * Installation OK, but we can still not resize the window. :-( We
-     don't have an X-Server, so this is expected.
-   * We can use byobu after sshing into the guest system (our
-     server). TTY-Multiplexing is great.
 *** OPTIONAL Update for Ubuntu Server 10.04
     The following steps are required for installing VirtualBox
     GuestAdditions on Ubuntu Server 10.04:
