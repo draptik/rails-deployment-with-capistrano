@@ -10,5 +10,8 @@ Howto deploy a simple Rails application to a server
     accordingly)
   - Version control: Git or Mercurial (Hg)
 
+* Please read the file [[file:installing_rails_on_server.org]] for further details
+
+
 
 
