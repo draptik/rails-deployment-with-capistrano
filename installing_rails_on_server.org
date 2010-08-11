@@ -1,4 +1,5 @@
 #+TITLE: Deploying a Rails application to a server located in a virtual machine using Capistrano
+
 * Motivation/Goals
   After going through my first couple of [[http://rubyonrails.org/][Ruby on Rails]] tutorials I
   wanted to find out which deployment options are available before
@@ -124,32 +125,6 @@
     later on.
   * If all went well we are now ready to try our first Rails
     deployment.
-*** OPTIONAL Update for Ubuntu Server 10.04
-    The following steps are required for installing VirtualBox
-    GuestAdditions on Ubuntu Server 10.04:
-    1.
-
-      : sudo aptitude install dkms build-essential
-
-    2. Reboot:
-
-       : sudo init 6
-
-    3. Devices -> Install GuestAdditions
-    4.
-
-      : sudo mkdir /media/cdrom
-
-    5.
-
-      : sudo mount /dev/cdrom /media/cdrom
-
-    6.
-
-      : sudo /media/cdrom/VBoxLinuxAdditions-x86.run
-
-    7. ignore warning "Could not find the X.Org or XFree86 Window
-       System": we're on a server without X, so this is OK.
 * SSH connection between Virtualbox Host and Guest (2-way)
   1. Check if public key is present on host:
 
